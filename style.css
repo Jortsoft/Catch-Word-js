@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    user-select: none;
+}
+body {
+    transition: 1s;
+}
+.font {
+    font-family: 'Odibee Sans', cursive;
+}
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.top-content .score,
+.top-content .stage {
+    font-size: 24px;
+    transition: 0.4s;
+}
+.top-content .stage {
+    color: #FF6666;
+}
+.container {
+    padding-left: 23px;
+    padding-right: 23px;
+}
+.word {
+    font-size: 36px;
+    margin-top: 25px;
+    text-align: center;
+}
+input {
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 24px;
+    text-align: center;
+    width: 90%;
+    margin-top: 65px;
+}
+.timer {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 40px;
+}
+.modal-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: fade-anim;
+    animation-duration: 0.6s;
+}
+.modal-cont .modal-box {
+    width: 90%;
+    display: none;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 15px;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+    animation-name: box-anim;
+    animation-duration: 0.6s;
+}
+.modal-cont .modal-box h1 {
+    font-size: 64px;
+    color: #FF4545;
+}
+.modal-cont .modal-box div {
+    font-size: 24px;
+}
+.modal-cont .modal-box .your-time {
+    margin-top: 45px;
+}
+.modal-cont .modal-box button {
+    margin-top: 60px;
+    width: 140px;
+    height: 44px;
+    border-radius: 20px;
+    background-color: #379FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s;
+}
+.modal-cont .modal-box button:hover {
+    transform: scale(1.1);
+}
+.add-timer {
+    justify-content: center;
+    color: green;
+    animation-name: timer-anim;
+    animation-duration: 0.4s;
+    display: none;
+}
+.modal-cont-begin {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.modal-cont-begin h1 {
+    font-size: 288px;
+    color: #ED1BFF;
+    -webkit-text-stroke: 5px white;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    opacity: 0.7;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer h1 {
+    font-size: 18px;
+}
+footer a {
+    text-decoration: none;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+@keyframes fade-anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes box-anim {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes timer-anim {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
